@@ -1,0 +1,50 @@
+{
+  "name": "coreend-sdk",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "source": "./src/index.ts",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "unpkg": "./dist/index.umd.js",
+  "exports": {
+    "require": "./dist/index.cjs",
+    "default": "./dist/index.modern.js"
+  },
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "yarn prebuild && microbundle",
+    "dev": "microbundle watch"
+  },
+  "keywords": [
+    "coreend",
+    "backend",
+    "nocode"
+  ],
+  "author": "Descending Systems AB",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/descendingsystems/coreend-sdk.git"
+  },
+  "bugs": {
+    "url": "git+https://github.com/descendingsystems/coreend-sdk/issues"
+  },
+  "homepage": "https://github.com/descendingsystems/coreend-sdk#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.31.0",
+    "@typescript-eslint/parser": "^5.31.0",
+    "eslint": "^7.32.0 || ^8.2.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.25.2",
+    "microbundle": "^0.15.0",
+    "prettier": "^2.7.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "axios": "^0.27.2"
+  }
+}
